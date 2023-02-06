@@ -16,10 +16,24 @@ const displayDate = () => {
 
 // Write a JavaScript program to convert a number to a string.
 
+const numToString = () => {
+
+  let num = document.getElementById("num-to-str").value;
+  let text = num.toString();
+  console.log(`This is a ${typeof text}`)
+  document.getElementById("number").innerHTML = text;
+}
 
 
 // Write a JavaScript program to convert a string to the number.
 
+const stringToNum = () => {
+
+  let str = document.getElementById("str-to-num").value;
+  let numb = parseInt(str)
+  console.log(`This is a ${typeof numb}`)
+  document.getElementById("string").innerHTML = numb;
+}
 
 
 // Write a JavaScript program that takes in different datatypes and prints out whether they are a:
@@ -30,15 +44,64 @@ const displayDate = () => {
   // * NaN
   // * String
   
+  const findTypeOf = () => {
 
+    let a = true
+    let b = null
+    let c
+    let d = 32
+    let e = isNaN('Hello')
+    if (e == true) {
+    e = "e is a NaN"
+    }
+    let f = "Hello"
+
+    let h2 = document.getElementById("practice")
+
+    let html = `<p>a is a ${typeof a}</p>
+                <p>b is a obejct set to null</p>
+                <p>c is a ${typeof c}</p>
+                <p>d is a ${typeof d}</p>
+                <p>${e}</p>
+                <p>f is a ${typeof f}</p>`
+
+    h2.insertAdjacentHTML("afterend", html)
+    
+  
+  }
   
 // Write a JavaScript program that adds 2 numbers together.
 
+const addNum = () => {
+
+  let num1 = parseInt(document.getElementById("num1").value)
+  let num2 = parseInt(document.getElementById("num2").value)
+
+  const sum = num1 + num2
+
+  document.getElementById("answer").value = sum
+}
 
 
 // Write a JavaScript program that runs only when 2 things are true.
 
+const twoTrue = () => {
 
+  let age = parseInt(document.getElementById("age").value)
+  let withFriends = (document.getElementById("friends").checked)
+
+  if (age >21 && withFriends){
+    document.getElementById("drinks-with-friends").innerHTML = 'Goes drinking with friends'
+  }
+  else if (age >21 || withFriends){
+    document.getElementById("drinks-with-friends").innerHTML = 'Find Something to do'
+  }
+
+  else  {
+    document.getElementById("drinks-with-friends").innerHTML = 'Sober'
+  }
+
+}
 
 // Write a JavaScript program that runs when 1 of 2 things are true.
 
